@@ -1,0 +1,47 @@
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.btn-format {
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container-fluid" id="loginDiv">
+	<h1 class="text-center">Contact Manager</h1>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<div class="form-group" id="loginForm">
+					<label for="usr">Username:</label>
+					<input type="text" class="form-control" id="usr"></input>
+					<label for="pass">Password:</label>
+					<input type="text" class="form-control" id="pass"></input>
+					<button type="button" class="btn btn-format" id="loginButton" >Submit</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
+<div id="loggedInDiv" style="Display:none; visibility:hidden;">
+<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<h3>Logged in as <span id="userName"></span></h3>
+				<button type="button" id="logoutButton" class="btn" onclick="doLogout();"> Log Out </button>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
+</body>
+</html>
