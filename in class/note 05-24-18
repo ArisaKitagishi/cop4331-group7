@@ -28,7 +28,7 @@ for contact database table:
 id        int
 first     nvarchar(50)
 last      nvarchar(50)
-UserID    int - foreign key
+UserID    nvarint(50) - foreign key
 address1  nvarchar(50)
 address2  nvarchar(50) - n is unit code while varcahr is NOT unit code 
 city      nvarchar(50)
