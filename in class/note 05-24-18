@@ -1,0 +1,64 @@
+What do you do first:
+
+Database - resides on server 
+
+API - resides on server
+
+Internet - resides on Earth
+
+JavaScript - resides on clien (served up within HTML)
+
+Front end/ presentation - resides on client and interacts with JS
+
+Platform - AWS - free student account - or GoDaddy 
+
+Database - create identify specification
+
+name    | Data Type 
+ID        int - set as primary key by right clicking
+
+Username  nvarchar(50)
+PW        nvarchar(50)
+first     nvarchar(50)
+last      nvarchar(50)
+CreatedDate   datetime - getdate() @ default 
+
+
+for contact database table:
+id        int
+first     nvarchar(50)
+last      nvarchar(50)
+UserID    int - foreign key
+address1  nvarchar(50)
+address2  nvarchar(50) - n is unit code while varcahr is NOT unit code 
+city      nvarchar(50)
+state     nvarchar(50)
+zip       nvarchar(50)
+phone     nvarchar(50)
+
+have web folder which contains:
+- bin (opt)
+- css -> style sheet
+- images
+- js
+- LAMPAPI
+
+
+adjust:
+  - var urlBAse
+  - var extension
+
+JS: 
+ - asynchronous try is better
+ 
+ *** REMEMBER to hide the password ***
+ 
+ use javascrip checker ------- ??? 
+
+
+
+
+
+
+
+
