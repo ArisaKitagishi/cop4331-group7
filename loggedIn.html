@@ -1,0 +1,113 @@
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Inputmask -->
+	 <link href="Inputmask-4.x/css/inputmask.css" rel="stylesheet">
+	
+	<style>
+	
+		.btn-format {
+			margin-top: 10px;
+		}
+		
+		.nav-btn-format {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" id="loggedInNavBar>
+	<div class="navbar-header>
+		<a class="navbar-brand" href="#">Contact Manager</a>
+	</div>
+	<ul class="nav navbar-nav pull-right">
+		<li><a href="#">Logged in as <span id="userName"> &nbsp;</span></a></li>
+		<li>
+			<span>
+				<button type="button" id="logoutButton" class="btn navbar-btn nav-btn-format" onclick="doLogout();"> Log Out </button>
+			</span>
+		</li>
+	</ul>
+</nav>
+
+<div id="accessUIDiv">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<h2>Your Contacts</h2>
+				<select id="contactList" style="display:none; visibility:hidden;">
+					<!-- <option value="volvo">Volvo</option> -->
+				</select>
+				<div class="form-group">
+					<label for="searchText">Search for Contact: &nbsp;</label><input type="text" class="form-control" id="searchText">
+					<button type="button" id="searchContactButton" class="btn btn-format" onclick="searchContacts();"> Search </button><br />
+				</div>
+				<span id="colorSearchResult"></span>
+				
+				<h2>Add Contact</h2>
+				<label for="nameForm">Name:</label>
+				<form class="form-inline" id="nameForm">
+					<div class="form-group">
+						<label class="sr-only" for="addFirstName">First:</label>
+						<input type="text" class="form-control" placeholder="First name" id="addFirstName">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="addLastName">Last:</label>
+						<input type="text" class="form-control" placeholder="Last name" id="addLastName">
+					</div>
+				</form>
+				<div class="form-group">
+					<label for="workPhone">Work Phone:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="workPhone"> 
+				</div>
+				<div class="form-group">
+					<label for="homePhone">Home Phone:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="homePhone"> 
+				</div>
+				<div class="form-group">
+					<label for="mobile">Mobile:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="mobile"> 
+				</div>
+				<div class="form-group">
+					<label for="address1">Address 1:</label>
+					<input type="text" class="form-control" placeholder="i.e. 1234 Imaginary Ave" id="address1"> 
+				</div>
+				<div class="form-group">
+					<label for="address2">Address 2:</label>
+					<input type="text" class="form-control" placeholder="i.e. 1234 Imaginary Ave" id="address2"> 
+				</div>
+				<div class="form-group">
+					<label for="zip">ZIP:</label>
+					<input type="text" class="form-control" placeholder="5 characters (i.e. 98765)" id="zip"> 
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="text" class="form-control" placeholder="Email" id="email"> 
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="Inputmask-4.x/dist/jquery.inputmask.bundle.js"></script>
+	<script src="Inputmask-4.x/dist/inputmask/phone-codes/phone.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$(":input").inputmask();
+		});
+	</script>
+<!--	
+
+	Add Color: <input type="text" id="colorText">
+	<button type="button" id="addColorButton" class="buttons" onclick="addColor();"> Add Color </button><br />
+	<span id="colorAddResult"></span>
+</div>
+-->
+
+</body>
+</html>
