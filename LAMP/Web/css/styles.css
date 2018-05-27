@@ -1,12 +1,30 @@
-body 
+body
 {
-    background-image: url("../images/background.png");
-    background-repeat: repeat;
+    background-image: url("../images/login2.jpeg");
+    background-size: 100% auto;
+    color: white;
 }
 
-h1 
+div.space {
+    margin:auto;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    border: 10px black;
+    margin-top: 50px;
+    margin-right:20%;
+    margin-left:20%;
+    padding:10px;
+    background: rgba(0,0,0,0.7);
+    background-clip: padding-box;
+}
+
+h1
 {
     font-size: 40px;
+    text-align: center;
+    color: black;
 }
 
 #loginDiv
@@ -26,15 +44,18 @@ h1
 
 .buttons
 {
+  margin-top: 10px;
 	font-size: 30px;
 }
 
 #loginName
 {
+  margin-right: auto;
 	font-size: 30px;
 }
 #loginPassword
 {
+  margin-right: auto;
 	font-size: 30px;
 }
 #searchText
@@ -45,4 +66,3 @@ h1
 {
 	font-size: 30px;
 }
-

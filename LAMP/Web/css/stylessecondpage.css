@@ -1,0 +1,68 @@
+body
+{
+    background-image: url("../images/secondpage.jpeg");
+    background-size: 100% auto;
+    color: white;
+}
+
+div.space {
+    margin:auto;
+    width: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    border: 10px black;
+    margin-top: 50px;
+    margin-right:20%;
+    margin-left:20%;
+    padding:10px;
+    background: rgba(0,0,0,0.7);
+    background-clip: padding-box;
+}
+
+h1
+{
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+
+#loginDiv
+{
+	font-size: 30px;
+}
+
+#loggedInDiv
+{
+	font-size: 30px;
+}
+
+#accessUIDiv
+{
+	font-size: 30px;
+}
+
+.buttons
+{
+  margin-top: 10px;
+	font-size: 30px;
+}
+
+#loginName
+{
+  margin-right: auto;
+	font-size: 30px;
+}
+#loginPassword
+{
+  margin-right: auto;
+	font-size: 30px;
+}
+#searchText
+{
+	font-size: 30px;
+}
+#colorText
+{
+	font-size: 30px;
+}
