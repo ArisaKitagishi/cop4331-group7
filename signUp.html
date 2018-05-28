@@ -1,0 +1,67 @@
+<html>
+<head>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Inputmask -->
+	 <link href="Inputmask-4.x/css/inputmask.css" rel="stylesheet">
+
+	<style>
+
+		.btn-format {
+			margin-top: 10px;
+		}
+
+		.nav-btn-format {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-default" id="RegisterBar>
+	<div class="navbar-header>
+		<a class="navbar-brand" href="#">Contact Manager</a>
+	</div>
+</nav>
+
+<div id="accessUIDiv">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<h2>Welcome</h2>
+				<br />
+				<h3>Register User</h3>
+				<div class="form-group">
+					<label for="usr">Username:</label>
+					<input type="text" class="form-control" id="usr">
+				</div>
+				<div class="form-group">
+					<label for="pass">Password:</label>
+					<input type="text" class="form-control" id="pass">
+					<button type="button" id="registerUserButton" class="btn btn-format" onclick="registerUser();"> Register </button><br />
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="Inputmask-4.x/dist/jquery.inputmask.bundle.js"></script>
+	<script src="Inputmask-4.x/dist/inputmask/phone-codes/phone.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$(":input").inputmask();
+		});
+	</script>
+<!--
+
+	Add Color: <input type="text" id="colorText">
+	<button type="button" id="addColorButton" class="buttons" onclick="addColor();"> Add Color </button><br />
+	<span id="colorAddResult"></span>
+</div>
+-->
+
+</body>
+</html>
