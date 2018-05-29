@@ -12,7 +12,7 @@
     $hostname = 'localhost';
     $databaseName = 'contactManager';
     $databaseUsername = 'root';
-    $databasePassword = 'contactManager7';
+    $databasePassword = 'contactmanager7';
 
     $conn = new mysqli($hostname, $databaseUsername, $databasePassword, $databaseName);
 
