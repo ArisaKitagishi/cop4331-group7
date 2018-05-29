@@ -6,6 +6,36 @@ var userId = 0;
 var firstName = "";
 var lastName = "";
 
+function registerUser()
+{
+	var username = document.getElementById("usr").value;
+	var password = document.getElementById("pass").value;
+	
+	document.getElementById("registerUser").innerHTML = "";
+	
+	var jsonPayload = '{"Username" : "' + newUser + '", "Password" : ' + passWord + '}';
+	var url = urlBase + '/Register.' + extension;
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				document.getElementById("registerUser").innerHTML = "User registered successfully";
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("registerUser").innerHTML = err.message;
+	}	
+}
+
 function doLogin()
 {
 	userId = 0;
