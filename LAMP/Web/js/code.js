@@ -8,8 +8,8 @@ var lastName = "";
 
 function registerUser()
 {
-	var username = document.getElementById("usr").value;
-	var password = document.getElementById("pass").value;
+	var newUser = document.getElementById("usr").value;
+	var passWord = document.getElementById("pass").value;
 	
 	document.getElementById("registerUser").innerHTML = "";
 	
