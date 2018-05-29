@@ -110,6 +110,42 @@ function addColor()
 	
 }
 
+
+function deleteContact(contactID)
+{
+	//var deleteContact = document.getElementById("contactText").value;
+	//document.getElementById("contactDeleteResult").innerHTML = "";
+	
+	var jsonPayload = '{"contact" : "' + deleteContact + '", "userId" : ' + userId + '}';
+	var url = urlBase + '/DeleteContact.' + extension;
+	
+
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				document.getElementById('searchContacts').value = previousSearch;
+				searchContacts();
+
+				//document.getElementById("contactDeleteResult").innerHTML = "Contact has been deleted";
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		document.getElementById("deleteContactResult").innerHTML = err.message;
+	}
+	
+}
+
+
 function searchColor()
 {
 	var srch = document.getElementById("searchText").value;
