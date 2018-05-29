@@ -45,8 +45,8 @@
             $sql = "SELECT ID FROM Users WHERE
                                         firstName = '$firstName' AND
                                         lastName = '$lastName' AND
-                                        username = '$userUsername' AND
-                                        password = '$userPassword'";
+                                        username = '$username' AND
+                                        password = '$password'";
 
             $result = $conn->query($sql);
 
