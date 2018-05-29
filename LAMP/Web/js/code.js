@@ -10,10 +10,12 @@ function registerUser()
 {
 	var newUser = document.getElementById("usr").value;
 	var passWord = document.getElementById("pass").value;
+	var firstName = document.getElementById("signUpFirstName").value;
+	var lastName = document.getElementById("signUpLastName").value;
 	
 	document.getElementById("registerUser").innerHTML = "";
 	
-	var jsonPayload = '{"Username" : "' + newUser + '", "Password" : ' + passWord + '}';
+	var jsonPayload = '{"Username" : "' + newUser + '", "Password" : ' + passWord + ', "First" : ' + firstName + ', "Last" : ' + lastName + '}';
 	var url = urlBase + '/SignUp.' + extension;
 	
 	var xhr = new XMLHttpRequest();
