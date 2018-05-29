@@ -1,5 +1,5 @@
 
-var urlBase = 'http://COP4331-3.com/LAMPAPI';
+var urlBase = 'http://cop4331-7.xyz';
 var extension = "php";
 
 var userId = 0;
