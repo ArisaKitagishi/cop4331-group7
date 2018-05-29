@@ -15,7 +15,7 @@ function registerUser()
 	
 	document.getElementById("registerUser").innerHTML = "";
 	
-	var jsonPayload = '{"Username" : "' + newUser + '", "Password" : ' + passWord + ', "First" : ' + firstName + ', "Last" : ' + lastName + '}';
+	var jsonPayload = '{"username" : "' + newUser + '", "password" : ' + passWord + ', "firstName" : ' + firstName + ', "lastName" : ' + lastName + '}';
 	var url = urlBase + '/SignUp.' + extension;
 	
 	var xhr = new XMLHttpRequest();
