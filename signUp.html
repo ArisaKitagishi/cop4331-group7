@@ -30,9 +30,18 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<div class="well">
-				<h2>Welcome</h2>
-				<br />
 				<h3>Register User</h3>
+				<label for="nameSignUpForm">Name:</label>
+				<form class="form-inline" id="nameSignUpForm">
+					<div class="form-group">
+						<label class="sr-only" for="signUpFirstName">First:</label>
+						<input type="text" class="form-control" placeholder="First name" id="signUpFirstName">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="signUpLastName">Last:</label>
+						<input type="text" class="form-control" placeholder="Last name" id="signUpLastName">
+					</div>
+				</form>
 				<div class="form-group">
 					<label for="usr">Username:</label>
 					<input type="text" class="form-control" id="usr">
