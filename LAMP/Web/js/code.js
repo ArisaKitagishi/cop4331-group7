@@ -1,5 +1,5 @@
 
-var urlBase = 'http://COP4331-3.com/LAMPAPI';
+var urlBase = 'http://cop4331-7.xyz';
 var extension = "php";
 
 var userId = 0;
@@ -10,11 +10,13 @@ function registerUser()
 {
 	var newUser = document.getElementById("usr").value;
 	var passWord = document.getElementById("pass").value;
+	var firstName = document.getElementById("signUpFirstName").value;
+	var lastName = document.getElementById("signUpLastName").value;
 	
 	document.getElementById("registerUser").innerHTML = "";
 	
-	var jsonPayload = '{"Username" : "' + newUser + '", "Password" : ' + passWord + '}';
-	var url = urlBase + '/Register.' + extension;
+	var jsonPayload = '{"username" : "' + newUser + '", "password" : ' + passWord + ', "firstName" : ' + firstName + ', "lastName" : ' + lastName + '}';
+	var url = urlBase + '/SignUp.' + extension;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
