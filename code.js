@@ -15,11 +15,11 @@ function registerUser()
 	
 	document.getElementById("registerUser").innerHTML = "";
 	
-	var jsonPayload = '{"username" : "' + newUser + '", "password" : "' + passWord + ', "firstName" : "' + firstName + ', "lastName" : "' + lastName + '"}';
+	var jsonPayload = '{"username" : ' + newUser + ', "password" : ' + passWord + ', "firstName" : ' + firstName + ', "lastName" : ' + lastName + '"}"';
 	var url = urlBase + '/signUp.' + extension;
 	
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
+	xhr.open("POST", url, false);
 	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
 	try
 	{
