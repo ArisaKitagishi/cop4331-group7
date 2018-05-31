@@ -1,36 +1,117 @@
 <html>
 <head>
-	<title>COP 4331 LAMP Stack Demo</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="Inputmask-4.x/css/inputmask.css" rel="stylesheet">-->
 	<script type="text/javascript" src="js/code.js"></script>
-	<link href="css/styles.css" rel="stylesheet">
+	<style>
+		.btn-format {
+			margin-top: 10px;
+		}
+	</style>
 </head>
 <body>
 
-<h1>COP 4331 LAMP Contact Manager</h1>
-	<div class="space">
-	Username: <br /> <input type="text" id="loginName"><br />
-	Password: <br /> <input type="text" id="loginPassword"><br />
-	<button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Submit </button>
-	<span id="loginResult"></span>
+<div class="container-fluid" id="loginDiv">
+	<h1 class="text-center">Contact Manager</h1>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<div class="form-group" id="loginForm">
+					<label for="usr">Username:</label>
+					<input type="text" class="form-control" id="usr"></input>
+					<label for="pass">Password:</label>
+					<input type="text" class="form-control" id="pass"></input>
+					<button type="button" class="btn btn-format" id="loginButton" onclick="doLogin();" >Submit</button>
+          <span id="loginResult"> </span>
+					<a href="signUp.html">Sign Up</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
 	</div>
+</div>
+
 <div id="loggedInDiv" style="display:none; visibility:hidden;">
 	Logged in as <span id="userName"></span><br />
 	<button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
 </div>
+
 <div id="accessUIDiv" style="display:none; visibility:hidden;">
-	<br />
-
-	Search for Color: <input type="text" id="searchText">
-	<button type="button" id="searchColorButton" class="buttons" onclick="searchColor();"> Search Color </button><br />
-	<span id="colorSearchResult"></span>
-	<select id="colorList" style="display:none; visibility:hidden;">
-		<!-- <option value="volvo">Volvo</option> -->
-	</select><br /><br />
-
-	Add Color: <input type="text" id="colorText">
-	<button type="button" id="addColorButton" class="buttons" onclick="addColor();"> Add Color </button><br />
-	<span id="colorAddResult"></span>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<h2>Your Contacts</h2>
+				<select id="contactList" style="display:none; visibility:hidden;">
+					<!-- <option value="volvo">Volvo</option> -->
+				</select>
+				<div class="form-group">
+					<label for="searchText">Search for Contact: &nbsp;</label><input type="text" class="form-control" id="searchText">
+					<button type="button" id="searchContactButton" class="btn btn-format" onclick="searchContacts();"> Search </button><br />
+				</div>
+				<span id="colorSearchResult"></span>
+				
+				<h2>Add Contact</h2>
+				<label for="nameForm">Name:</label>
+				<form class="form-inline" id="nameForm">
+					<div class="form-group">
+						<label class="sr-only" for="addFirstName">First:</label>
+						<input type="text" class="form-control" placeholder="First name" id="addFirstName">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="addLastName">Last:</label>
+						<input type="text" class="form-control" placeholder="Last name" id="addLastName">
+					</div>
+				</form>
+				<div class="form-group">
+					<label for="workPhone">Work Phone:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="workPhone"> 
+				</div>
+        <!--
+				<div class="form-group">
+					<label for="homePhone">Home Phone:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="homePhone"> 
+				</div>
+				<div class="form-group">
+					<label for="mobile">Mobile:</label>
+					<input data-inputmask="'alias': 'phone'" class="form-control" id="mobile"> 
+				</div>
+        -->
+				<div class="form-group">
+					<label for="address1">Address 1:</label>
+					<input type="text" class="form-control" placeholder="i.e. 1234 Imaginary Ave" id="address1"> 
+				</div>
+				<div class="form-group">
+					<label for="address2">Address 2:</label>
+					<input type="text" class="form-control" placeholder="i.e. 1234 Imaginary Ave" id="address2"> 
+				</div>
+				<div class="form-group">
+					<label for="zip">ZIP:</label>
+					<input type="text" class="form-control" placeholder="5 characters (i.e. 98765)" id="zip"> 
+				</div>
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input type="text" class="form-control" placeholder="Email" id="email"> <br />
+					<button type="button" id="addContactButton" class="btn btn-format" onclick="addContact();"> Add </button><br />
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 </div>
+
+<!--
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="Inputmask-4.x/dist/jquery.inputmask.bundle.js"></script>
+	<script src="Inputmask-4.x/dist/inputmask/phone-codes/phone.js"></script>
+	<script language="javascript">
+		$(document).ready(function(){
+			$(":input").inputmask();
+		});
+	</script>
+ -->
 
 </body>
 </html>
