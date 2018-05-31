@@ -1,35 +1,63 @@
 <html>
 <head>
-	<title>COP 4331 LAMP Stack Demo</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Inputmask -->
+ 	<!-- <link href="Inputmask-4.x/css/inputmask.css" rel="stylesheet"> -->
 	<script type="text/javascript" src="js/code.js"></script>
-	<link href="css/stylessecondpage.css" rel="stylesheet">
+
+	<style>
+
+		.btn-format {
+			margin-top: 10px;
+		}
+
+		.nav-btn-format {
+			margin-right: 10px;
+		}
+	</style>
 </head>
 <body>
 
-<h1>COP 4331 LAMP Contact Manager</h1>
-	<div class="space">
-	Find Contact: <br /> <input type="text" id="loginName"><br />
-	Add Contact: <br /> <input type="text" id="loginPassword"><br />
-	<button type="button" id="loginButton" class="buttons" onclick="doLogin();"> Submit </button>
-	<span id="loginResult"></span>
+<nav class="navbar navbar-default" id="RegisterBar>
+	<div class="navbar-header>
+		<a class="navbar-brand" href="/">Contact Manager</a>
 	</div>
-<div id="loggedInDiv" style="display:none; visibility:hidden;">
-	Logged in as <span id="userName"></span><br />
-	<button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
-</div>
-<div id="accessUIDiv" style="display:none; visibility:hidden;">
-	<br />
+ <br />
+ <a href="index.html">Log in</a>
+</nav>
 
-	Search for Color: <input type="text" id="searchText">
-	<button type="button" id="searchColorButton" class="buttons" onclick="searchColor();"> Search Color </button><br />
-	<span id="colorSearchResult"></span>
-	<select id="colorList" style="display:none; visibility:hidden;">
-		<!-- <option value="volvo">Volvo</option> -->
-	</select><br /><br />
-
-	Add Color: <input type="text" id="colorText">
-	<button type="button" id="addColorButton" class="buttons" onclick="addColor();"> Add Color </button><br />
-	<span id="colorAddResult"></span>
+<div id="accessUIDiv">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<div class="well">
+				<h3>Register User</h3>
+				<label for="nameSignUpForm">Name:</label>
+				<form class="form-inline" id="nameSignUpForm">
+					<div class="form-group">
+						<label class="sr-only" for="signUpFirstName">First:</label>
+						<input type="text" class="form-control" placeholder="First name" id="signUpFirstName">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="signUpLastName">Last:</label>
+						<input type="text" class="form-control" placeholder="Last name" id="signUpLastName">
+					</div>
+				</form>
+				<div class="form-group">
+					<label for="usr">Username:</label>
+					<input type="text" class="form-control" id="usr">
+				</div>
+				<div class="form-group">
+					<label for="pass">Password:</label>
+					<input type="text" class="form-control" id="pass">
+					<button type="button" id="registerUserButton" class="btn btn-format" onclick="registerUser();"> Register </button><br />
+					<span id="registerUser"> </span>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
 </div>
 
 </body>
