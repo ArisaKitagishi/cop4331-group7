@@ -54,6 +54,8 @@
          (empty($email) ? (empty($email) === empty($row["email"])) : ($email === $row["email"]))
         )
         {  
+	     if($id != $row["friendID"])
+		     break;
            $resultCheck = "That contact already exists.";
            $conn->close();
         }
